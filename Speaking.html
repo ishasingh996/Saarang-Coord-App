@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Speaking</title>
+	<style>
+		body
+		{
+			background-image: url("https://diversity.missouri.edu/images/speak-up.jpg");
+			background-repeat: no-repeat;
+			background-position: left;
+		}
+	</style>
+</head>
+<body align="center">
+	<h1>REGISTRATION FOR SPEAKING</h1>
+	<h3>PLEASE FILL THE FOLLOWING FIELDS</h3>
+	<form name="myForm" action="demo_form.asp" onclick="return validateForm()" method="post">
+		<b>First Name:</b>
+		<br>
+			<input type="text" name="firstname">
+		<br>
+		<b>Last Name:</b>
+		<br>
+			<input type="text" name="lastname">
+		<br>
+		<b>Gender:</b>
+		<br>
+		
+			 <input type="radio" name="gender" value="male" checked> Male<br>
+			 <input type="radio" name="gender" value="female"> Female<br>
+			 <input type="radio" name="gender" value="other"> Other
+		
+		<br>
+		<b>Email:</b>
+		<br>
+		<input type="text" name="email">
+		<br><br>
+		<b>Have you had any prior experience in Speaking?</b>
+		<br>
+			<input type="radio" name="exp" value="Y" checked> YES<br>
+		 	<input type="radio" name="exp" value="N"> NO<br>
+		 <br>
+		 <b>Would you like some workshops related to the events?</b>
+		 <br>
+		 	<input type="radio" name="wk" value="Y" checked> YES<br>
+		 	<input type="radio" name="wk" value="N"> NO<br>
+		<b>What would you like to participate in? Pick from Debate, Monologue and MUN. You can choose more than one.</b>
+		<br>
+			<textarea name="choice" rows="5" cols="50"></textarea>
+			
+		<br>
+		<br>
+		<input type="submit" name="SUBMIT">
+		<input type="reset" name="RESET">
+	</form>
+	<script>
+		function validateForm() 
+		{
+    		var x = document.forms["myForm"]["choice"].value;
+    		var a = document.forms["myForm"]["firstname"].value;
+	    	var b = document.forms["myForm"]["lastname"].value;
+	    	var c = document.forms["myForm"]["email"].value;
+    		if (a == null || a == "")
+	    		{
+	        		alert("First name must be filled out");
+	        		return false;
+	        		
+	    		} 
+
+	    		else if (b == null || b == "")
+	    		{
+	        		alert("Last name must be filled out");
+	        		return false;
+	        		
+	    		}
+
+	    		else if (c == null || c == "")
+	    		{
+	        		alert("Email id must be filled out");
+	        		return false;
+	        		
+	    		}
+	    		if (x == null || x == "")
+	    	  	{
+	        		alert("Choices must be filled.");
+	        		return false;
+	    		}
+	    		else
+	    		{
+	    			return true;
+	    		}
+		}
+	</script>
+</body>
+</html>

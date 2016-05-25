@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choreo</title>
+	<style>
+		body
+		{
+			background-image: url("file:///home/isha/Desktop/REGISTRATION%20FORM/IDA-Logo_full-2cdenil.jpeg");
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: 450px;
+		}
+	</style>
+</head>
+<body align="center">
+	<h1>REGISTRATION FOR CHOREO</h1>
+	<h3>PLEASE FILL THE FOLLOWING FIELDS</h3>
+	<br>
+	<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+		<b>First Name:</b>
+		<br>
+			<input type="text" name="firstname">
+		<br>
+		<b>Last Name:</b>
+		<br>
+			<input type="text" name="lastname">
+		<br>
+		<b>Gender:</b>
+		<br>
+		
+			 <input type="radio" name="gender" value="male" checked> Male<br>
+			 <input type="radio" name="gender" value="female"> Female<br>
+			 <input type="radio" name="gender" value="other"> Other
+		
+		<br>
+		<b>Email:</b>
+		<br>
+		<input type="text" name="email">
+		<br><br>
+		<b>List the dance styles you are interested in. </b>
+		<br>
+		
+			<textarea name="choice" rows="5" cols="50"></textarea>
+		<br>
+		<br>
+		<input type="submit" name="SUBMIT">
+		<input type="reset" name="RESET">
+	</form>
+	<script>
+		function validateForm() 
+		{
+    		var x = document.forms["myForm"]["choice"].value;
+    		var a = document.forms["myForm"]["firstname"].value;
+	    	var b = document.forms["myForm"]["lastname"].value;
+	    	var c = document.forms["myForm"]["email"].value;
+    		if (a == null || a == "")
+	    		{
+	        		alert("First name must be filled out");
+	        		return false;
+	        		
+	    		} 
+
+	    		else if (b == null || b == "")
+	    		{
+	        		alert("Last name must be filled out");
+	        		return false;
+	        		
+	    		}
+
+	    		else if (c == null || c == "")
+	    		{
+	        		alert("Email id must be filled out");
+	        		return false;
+	        		
+	    		}
+	    		if (x == null || x == "")
+	    	  	{
+	        		alert("Interests must be filled.");
+	        		return false;
+	    		}
+	    		else
+	    		{
+	    			return true;
+	    		}
+		}
+	</script>
+</body>
+</html>
