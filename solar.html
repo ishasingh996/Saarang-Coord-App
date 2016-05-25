@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Solar system</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="system">
+	<img src="http://goo.gl/PmbqZa" id="sun" />
+	<div id="p1-orbit">
+		<img src="http://goo.gl/41IWnf" id="p1" />
+	</div>
+	<div id="p2-orbit">
+		<img src="http://goo.gl/41IWnf" id="p2" />
+	</div>
+	<div id="p3-orbit">
+		<img src="http://goo.gl/41IWnf" id="p3" />
+	</div>
+</div>
+<form>
+	<center>
+	<br>
+	<input type="button" name="StartP1" value="Start P1" onclick="startp1();">
+	<input type="button" name="StopP1" value="Stop P1" onclick="stopp1();">
+	<input type="button" name="ResetP1" value="Reset P1" onclick="resetp1();">
+	
+	<br><br>
+	<input type="button" name="StartP2" value="Start P2" onclick="startp2();">
+	<input type="button" name="StopP2" value="Stop P2" onclick="stopp2();">
+	<input type="button" name="ResetP2" value="Reset P2" onclick="resetp2();">
+	<br><br>
+	<input type="button" name="StartP3" value="Start P3" onclick="startp3();">
+	<input type="button" name="StopP3" value="Stop P3" onclick="stopp3();">
+	<input type="button" name="ResetP3" value="Reset P3" onclick="resetp3();">
+	<br><br>
+	</center>
+</form>
+<script>
+	function stopp1()
+	{	
+		document.getElementById("p1-orbit").style.WebkitAnimationPlayState = "paused";		
+    }
+	function stopp2()
+	{	
+		document.getElementById("p2-orbit").style.WebkitAnimationPlayState = "paused";		
+    }
+	function stopp3()
+	{	
+		document.getElementById("p3-orbit").style.WebkitAnimationPlayState = "paused";		
+    }
+	function startp1() 
+	{
+    	document.getElementById("p1-orbit").style.WebkitAnimationPlayState = "running"; 
+	}
+	function startp2() 
+	{
+    	document.getElementById("p2-orbit").style.WebkitAnimationPlayState = "running"; 
+	}
+	function startp3() 
+	{
+    	document.getElementById("p3-orbit").style.WebkitAnimationPlayState = "running"; 
+	}			
+	function resetp1() 
+	{
+		
+    	document.getElementById("p1-orbit").style.WebkitAnimationName = "";
+		setTimeout(function ()
+		{
+   			 document.getElementById("p1-orbit").style.WebkitAnimationName = "spin";
+		}, 0);
+	
+	}  /* I wasn't able to get this part, it doesn't reset by this method*/			
+	function resetp2() 
+	{
+    	document.getElementById("p2-orbit").style.WebkitAnimationName = "";
+    	 document.getElementById("p2-orbit").style.WebkitAnimationName = "spin";
+	}		/* random guess, this didn't work either */
+	/*ultimately, reset P1 and reset P2 buttons have zero effects on the planets, while reset P3 just resumes the motion of the planet */	
+	function resetp3() 
+	{
+    	document.getElementById("p3-orbit").style.WebkitAnimationPlayState = "running"; 
+	}			
+								
+</script>
+</body>
+</html>

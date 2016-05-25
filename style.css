@@ -1,0 +1,87 @@
+body
+{
+
+	background: white;
+	width:100%;
+	
+}
+#system
+{
+	width:800px;
+	margin:auto;
+	background:black;
+	height:800px;
+}
+#sun
+{
+	margin-top:300px;
+	margin-left:300px;
+	position:absolute;
+}
+#p1{
+	position:absolute;
+	margin-left:200px;
+	height:50px;
+	width:50px;
+}
+#p1-orbit{
+	position:absolute;
+	margin-top:200px;
+	margin-left:200px;
+	width:400px;
+	height:400px;
+	border:1px dotted white;
+	border-radius:100%;
+	-webkit-animation:spin 10s linear infinite;
+	animation:spin 10s linear infinite;
+	
+}
+#p2{
+	position:absolute;
+	margin-left:150px;
+	height:50px;
+	width:50px;
+}
+#p2-orbit{
+	position:absolute;
+	margin-top:150px;
+	margin-left:150px;
+	width:500px;
+	height:500px;
+	border:1px dotted white;
+	border-radius:100%;
+	-webkit-animation:spin 20s linear infinite;
+	animation:spin 20s linear infinite;
+	
+}
+#p3{
+	position:absolute;
+	margin-left:100px;
+	height:50px;
+	width:50px;
+}
+#p3-orbit{
+	position:absolute;
+	margin-top:100px;
+	margin-left:100px;
+	width:600px;
+	height:600px;
+	border:1px dotted white;
+	border-radius:100%;
+	-webkit-animation:spin 30s linear infinite;
+	animation:spin 30s linear infinite;
+	
+}
+
+@-webkit-keyframes spin{
+100%{
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg);
+}
+}
+@keyframes spin{
+100%{
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg);
+}
+}
